@@ -17,13 +17,13 @@ class Media extends PureComponent {
     // Los nuevos estandares de ECMAScript7 hacen odo lo de arriba de la siguiente manera
     // Con una funcion de flecha no necesitas poner el .bind(this) en el constructor
     // Ahora de esta manera se hereda el conexto del padre
-    // handleClick = (event) => {
-    //     console.log(this.state.title)
-    // }
+    handleClick = (event) => {
+        this.props.openModal(this.props)
+    }
 
     render() {
         return (
-            <div className="Media" onClick={this.props.handleClick}>
+            <div className="Media" onClick={this.handleClick}>
                 <div className="Media-cover">
                     <img
                         src={this.state.cover}
