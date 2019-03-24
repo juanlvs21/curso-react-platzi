@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 
 // Import components
-import Media from './players/components/Media/media';
+import Home from './pages/containers/Home';
 
-ReactDOM.render(<Media />, document.getElementById('root'));
+// Import data
+import Data from './data.json';
+
+ReactDOM.render(<Home data={Data} />, document.getElementById('home-container'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
