@@ -18,7 +18,7 @@ class Media extends PureComponent {
     // Con una funcion de flecha no necesitas poner el .bind(this) en el constructor
     // Ahora de esta manera se hereda el conexto del padre
     handleClick = (event) => {
-        this.props.openModal(this.props)
+        this.props.openModal(this.props.id)
     }
 
     render() {
@@ -32,9 +32,9 @@ class Media extends PureComponent {
                         height={160}
                         className="Media-image"
                     />
-                    <h3 className="Media-title">{this.state.title}</h3>
-                    <p className="Media-author">{this.state.author}</p>
                 </div>
+                <h3 className="Media-title">{this.state.title}</h3>
+                <p className="Media-author">{this.state.author}</p>
             </div>
         );
     }
